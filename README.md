@@ -5,7 +5,7 @@
 
 ## Description
 
-It's project...
+It's our own printf project...
 
 ## Authors
 
