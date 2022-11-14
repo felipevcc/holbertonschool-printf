@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Printf Project</h1>
-    <img src="https://img.shields.io/github/repo-size/felipevcc/dotfiles?color=6E93CC&labelColor=1a1e29&style=for-the-badge">
+    <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=6E93CC&labelColor=1a1e29&style=for-the-badge">
 </div>
 
 ## Description
