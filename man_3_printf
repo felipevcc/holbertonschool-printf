@@ -1,0 +1,27 @@
+.TH PRINTF 1 11-15-2022 Printf\ 0.1 Library\ Function\ Manual
+
+.SH NAME
+printf - format and print data
+
+.SH SYNOPSIS
+.B printf
+.I FORMAT [ARGUMENT]...
+.TP
+.B \rprintf 
+.I \rOPTION
+
+.SH DESCRIPTION
+
+aertg
+
+.SH OPTIONS
+
+adfg
+
+.SH RETURN VALUE
+
+Upon successful return, these functions return the number of characters printed (excluding the null  byte  used  to  end  output  to strings). If an output error is encountered, a negative value is returned.
+
+.SH EXAMPLES
+
+aerg
