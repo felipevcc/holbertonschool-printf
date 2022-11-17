@@ -5,6 +5,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+/* Structures */
+typedef struct ptr
+{
+	char *c;
+	void (*f)();
+} ptr_ch;
 
 /* Functions Prototypes */
 _printf(const char * restrict format, ...);
