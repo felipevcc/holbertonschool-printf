@@ -8,5 +8,6 @@
 
 int _printf(const char *format, ...)
 {
+	int buf
 	return (0);
 }
