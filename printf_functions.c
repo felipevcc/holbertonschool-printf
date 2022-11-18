@@ -56,9 +56,6 @@ void func_r(char **buff, int index, va_list value)
 }*/
 
 int func_ptg(char *buff, int count, va_list value)
-{
-	/**buff = 'k';*/
-	
-	return (_assign(buff, count, "98"));
-	/*return (_assign(buff, count, "kz"));*/
+{	
+	return (_assign(buff, count, va_arg(value, char *)));
 }

@@ -9,15 +9,12 @@
 int _printf(const char *format, ...)
 {
 	char *buff;
-	int  i = 0, count = 0;
+	int  i = 0, count = 0, buff_len = 0;
 	va_list arg_value;
 	int (*func)(char *, int, va_list);
 
-	if (!format)
-		exit(1);
-	
 	buff = malloc(4000);
-	if (!buff)
+	if (!format || !buff)
 		exit(1);
 
 	va_start(arg_value, format);
@@ -33,15 +30,15 @@ int _printf(const char *format, ...)
 		{
 			func = check_prtr(format[i + 1]);
 			if (!func)
-				exit(1);
-			/*func(&buff[count], arg_value);*/
+				exit(1);	
 			count = func(&buff[count], count, arg_value);
 			i++;	
 		}
 		i++;
 	}
-	write(1, buff, strlen(buff));
+	buff_len = strlen(buff);
+	write(1, buff, buff_len);
 	va_end(arg_value);
 	free(buff);
-	return (strlen(buff));	
+	return (buff_len);	
 }

@@ -29,10 +29,7 @@ int (*check_prtr(char format))(char *, int, va_list)
 	while (arg_ptr[j].c)
 	{
 		if (format == *arg_ptr[j].c)
-		{
-			printf("Entro al condicional\n");
 			break;
-		}
 		j++;
 	}
 
