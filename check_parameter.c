@@ -1,6 +1,6 @@
 #include "main.h"
 
-void (*check_prtr(char format))(char *, va_list)
+int (*check_prtr(char format))(char *, int, va_list)
 {
 	int j = 0;
 

@@ -14,6 +14,7 @@ int main(void)
 	/*len = _printf("Let's try to printf a simple sentence.\n");*/
 	/*_printf("Let's try to printf a simple sentence.\n");*/
 	/*_printf("Length:[%%]\n");*/
-	_printf("Length:[%%] and [%%]\n");
+	/*_printf("Length:[%%] and [%%]\n");*/
+	_printf("Length:%% a\n");
 	return (0);
 }

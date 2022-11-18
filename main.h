@@ -12,12 +12,12 @@
 typedef struct ptr
 {
 	char *c;
-	void (*f)(char *, va_list);
+	int (*f)(char *, int, va_list);
 } ptr_ch;
 
 /* Functions Prototypes */
 int _printf(const char * format, ...);
-void (*check_prtr(char format))(char *, va_list);
+int (*check_prtr(char format))(char *, int, va_list);
 /*
 void func_d(char **buff, int index, va_list value);
 void func_i(char **buff, int index, va_list value);
@@ -29,7 +29,8 @@ void func_c(char **buff, int index, va_list value);
 void func_s(char **buff, int index, va_list value);
 void func_p(char **buff, int index, va_list value);
 */
-void func_ptg(char *buff, va_list value);
+int func_ptg(char *buff, int count, va_list value);
 /*void func_r(char **buff, int index, va_list value);*/
+int _assign(char *buff, int count, char *value);
 
 #endif

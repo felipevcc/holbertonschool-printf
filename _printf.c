@@ -9,9 +9,9 @@
 int _printf(const char *format, ...)
 {
 	char *buff;
-	int  i = 0, aux = 0;
+	int  i = 0, count = 0;
 	va_list arg_value;
-	void (*func)(char *, va_list);
+	int (*func)(char *, int, va_list);
 
 	if (!format)
 		exit(1);
@@ -24,26 +24,18 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		/*printf("%c\n", format[i]);*/
 		if (format[i] != '%')
 		{
-			if (aux > 0)
-				buff[i - aux] = format[i];
-			else
-				buff[i] = format[i];
+			buff[count] = format[i];
+			count++;
 		}
 		else
 		{
-			printf("Entró\n");
 			func = check_prtr(format[i + 1]);
 			if (!func)
-			{
-				printf("exit");
 				exit(1);
-			}
-			func(&buff[i - aux], arg_value);
-			printf("%c\n", buff[i - aux]);
-			aux++;
+			/*func(&buff[count], arg_value);*/
+			count = func(&buff[count], count, arg_value);
 			i++;	
 		}
 		i++;
