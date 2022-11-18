@@ -55,8 +55,8 @@ void func_r(char **buff, int index, va_list value)
 	asdf
 }*/
 
-void func_ptg(char **buff, int index, va_list value)
+void func_ptg(char *buff, va_list value)
 {
 	printf("func\n");
-	*buff[index] = 'k';
+	*buff = 'k';
 }
