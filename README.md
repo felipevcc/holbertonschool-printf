@@ -5,11 +5,11 @@
 
 ## Description
 
-It's our own printf project.
+This project is a simulation of the printf function in C with its most important features, it was made in the software development program of [Holberton School](https://www.holbertonschool.com/).
 
 ## Man page
 
-If you want see an explanation of this function you can run our man page this way:
+The man page is a file wich explains in detail how the function works. If you want see a full explanation of this function you can run our man page this way:
 ```
 man ./man_3_printf
 ```
@@ -25,7 +25,7 @@ img...
 
 <br>
 
-To call the `_printf()` function is like this:
+To call the `_printf()` function the next code is required:
 ```
 #include "main.h"
 
@@ -42,11 +42,11 @@ int main()
 
 <br>
 
-To compile the program is like this:
+To compile the program this command has to be executed:
 ```
 make -f makefile
 ```
-This will create a compilation file, its name is `main.out`. You can run this with this command in your terminal:
+This will create a compilation file, its name is `main.out`. You can run this file in your terminal with the next command:
 ```
 ./main.out
 ```
@@ -54,6 +54,22 @@ This will create a compilation file, its name is `main.out`. You can run this wi
 
 <details close>
 <summary> <strong> Parameters </strong> </summary>
+
+<br>
+
+| Indicator  | Data type | Description |
+| ------------- |:-------------:|:-------------:|
+| %d      | int    | Print an int as a signed decimal number  |
+| %i      | int    | Print an int as a signed decimal number  |
+| %u      | int    | Print an unsigned as an unsigned decimal number  |
+| %o      | int    | Print an unsigned as an unsigned octal number  |
+| %x      | int    | Hexadecimal notation (using lowercase letters a-f)  |
+| %X      | int    | Hexadecimal notation (using uppercase letters A-F)  |
+| %c      | int    | Convert an int to an unsigned character and print the resulting character  |
+| %s      | char * | Print the string pointed to by a char *  |
+| %p      | void * | Print a void * argument in hexadecimal (ANSI C only)  |
+| %%      | char   | Print a single % character  |
+| %r      | char   | Prints the same string "%r"  |
 </details>
 
 ## Authors
