@@ -28,7 +28,7 @@ int main(void)
 		fflush(stdout);
 		return (1);
 	}	*/
-	int len, len2;
+/*	int len, len2;
 
 	len = _printf("%c", '\0');
 	len2 = printf("%c", '\0');
@@ -38,7 +38,8 @@ int main(void)
 		printf("Lengths differ.\n");
 		fflush(stdout);
 		return (1);
-	}
+	}*/
 	/*printf("%");*/
+	_printf("%c", '\0');
 	return (0);
 }
