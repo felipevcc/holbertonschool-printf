@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _assing - assing and count function
+ * _assign - assing and count function
  * @buff: str var
  * @count: index counter
  * @value: value in the index

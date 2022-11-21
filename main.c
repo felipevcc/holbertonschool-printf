@@ -15,7 +15,20 @@ int main(void)
 	/*_printf("Length:%s a\n", "hola");*/
 	/*_printf("Character:[%c]\n", '\0');*/
 	/*_printf("Percent:[%%]\n");*/
-	_printf("hola %! gola a\n");
-	
+	/*_printf("hola %! gola a\n");*/
+
+	/*int len, len2;
+
+	len = _printf("%c", '\0');	
+	len2 = printf("%c", '\0');
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}	*/
+	_printf("%");
+	/*printf("%");*/
 	return (0);
 }

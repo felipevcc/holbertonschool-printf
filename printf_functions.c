@@ -11,8 +11,12 @@
 int func_c(char *buff, int count, va_list value)
 {
 	int ch = va_arg(value, int);
+
 	if (!ch)
+	{
+		write(1, "\n", 1);
 		exit(1);
+	}
 	buff[0] = ch;
 	return (count + 1);
 }
