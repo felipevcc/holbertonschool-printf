@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	int (*func)(char *, int, va_list);
 
 	buff = malloc(4000);
-	if (!format || !buff)
+	if ((!format || !buff) || (format[0] == '%' && format[1] == '\0'))
 		exit(1);
 
 	va_start(arg_value, format);
@@ -31,8 +31,8 @@ int _printf(const char *format, ...)
 			func = check_prtr(format[i + 1]);
 			if (!func)
 			{
-				if (i == 0 && !format[i + 1])
-					exit(1);
+				/*if (i == 0 && !format[i + 1])*/
+					/*exit(1);*/
 				buff[count] = '%';
 				i++;
 				count++;
