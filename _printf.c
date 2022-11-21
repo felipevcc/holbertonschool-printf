@@ -29,15 +29,15 @@ int _printf(const char *format, ...)
 		else
 		{
 			func = check_prtr(format[i + 1]);
-			if (!func && format[i + 1])
+			if (!func)
 			{
+				if (i == 0 && !format[i + 1])
+					exit(1);
 				buff[count] = '%';
 				i++;
 				count++;
 				continue;
 			}
-			else
-				exit(1);
 			count = func(&buff[count], count, arg_value);
 			i++;
 		}
