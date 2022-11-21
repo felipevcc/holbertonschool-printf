@@ -5,7 +5,9 @@ int (*check_prtr(char format))(char *, int, va_list)
 	int j = 0;
 
 	ptr_ch arg_ptr[] = {
-		{"%", func_ptg},	
+		{"c", func_c},
+		{"s", func_s},
+		{"%", func_ptg},
 		{NULL, NULL}
 	};
 

@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	buff = malloc(4000);
 	if (!format || !buff)
-		exit(1);
+	exit(1);
 
 	va_start(arg_value, format);
 
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	buff_len = strlen(buff);
+	buff_len = _strlen(buff);
 	write(1, buff, buff_len);
 	va_end(arg_value);
 	free(buff);
