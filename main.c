@@ -13,8 +13,9 @@ int main(void)
 	/*_printf("Length:[%%]\n");*/
 	/*_printf("Length:[%%] and [%%]\n");*/
 	/*_printf("Length:%s a\n", "hola");*/
-	/*_printf("Character:[%c]\n", 'H');*/
-	_printf("Percent:[%%]\n");
+	/*_printf("Character:[%c]\n", '\0');*/
+	/*_printf("Percent:[%%]\n");*/
+	_printf("hola %! gola a\n");
 	
 	return (0);
 }

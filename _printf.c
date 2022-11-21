@@ -30,9 +30,14 @@ int _printf(const char *format, ...)
 		{
 			func = check_prtr(format[i + 1]);
 			if (!func)
-				exit(1);	
+			{
+				buff[count] = '%';
+				i++;
+				count++;
+				continue;
+			}
 			count = func(&buff[count], count, arg_value);
-			i++;	
+			i++;
 		}
 		i++;
 	}
@@ -40,5 +45,5 @@ int _printf(const char *format, ...)
 	write(1, buff, buff_len);
 	va_end(arg_value);
 	free(buff);
-	return (buff_len);	
+	return (buff_len);
 }

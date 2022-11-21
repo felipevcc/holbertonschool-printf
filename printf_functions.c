@@ -1,62 +1,43 @@
 #include "main.h"
-/*
-void func_d(char *buff, int count, va_list value)
-{
-	*buff[index] = itoa(va_arg(value, int));
-}
 
-void func_i(char *buff, int count, va_list value)
-{
-	asdf
-}
-
-void func_u(char *buff, int count, va_list value)
-{
-	asdf
-}
-
-void func_o(char *buff, int count, va_list value)
-{
-	asdf
-}
-
-void func_x(char *buff, int count, va_list value)
-{
-	asdf
-}
-
-void func_X(char *buff, int count, va_list value)
-{
-	asdf
-}
-*/
+/**
+ * func_c - add a character to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
 
 int func_c(char *buff, int count, va_list value)
 {
-	buff[0] = va_arg(value, int);
+	int ch = va_arg(value, int);
+	if (!ch)
+		exit(1);
+	buff[0] = ch;
 	return (count + 1);
 }
+
+/**
+ * func_s - add a string to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
 
 int func_s(char *buff, int count, va_list value)
 {
 	return (_assign(buff, count, va_arg(value, char *)));
 }
-/*
-void func_p(char *buff, int count, va_list value)
-{
-	asdf
-}
 
-void func_ptg(char *buff, int count, va_list value)
-{
-	asdf
-}
+/**
+ * func_ptg - add a '%' to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
 
-void func_r(char *buff, int count, va_list value)
-{
-	asdf
-}
-*/
 int func_ptg(char *buff, int count, va_list value)
 {
 	(void)value;
