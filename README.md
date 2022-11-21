@@ -11,7 +11,7 @@ This project is a simulation of the printf function in C with its most important
 
 The man page is a file wich explains in detail how the function works. If you want see a full explanation of this function you can run our man page this way:
 ```
-man ./man_3_printf
+$ man ./man_3_printf
 ```
 
 ## Flowchart
@@ -20,7 +20,7 @@ img...
 
 ## Usage
 
-<details close>
+<details open>
 <summary> <strong> Syntaxis </strong> </summary>
 
 <br>
@@ -37,25 +37,27 @@ int main()
 ```
 </details>
 
-<details close>
+<details open>
 <summary> <strong> Compilation </strong> </summary>
 
 <br>
 
 To compile the program this command has to be executed:
 ```
-make -f makefile
+$ make -f makefile
 ```
 This will create a compilation file, its name is `main.out`. You can run this file in your terminal with the next command:
 ```
-./main.out
+$ ./main.out
 ```
 </details>
 
-<details close>
+<details open>
 <summary> <strong> Parameters </strong> </summary>
 
 <br>
+
+The next chart explains the detailed functionality of the parameters that the function accepts, respectively with each data type.
 
 | Indicator  | Data type | Description |
 | ------------- |:-------------:|:-------------:|
@@ -70,6 +72,23 @@ This will create a compilation file, its name is `main.out`. You can run this fi
 | %p      | void * | Print a void * argument in hexadecimal (ANSI C only)  |
 | %%      | char   | Print a single % character  |
 | %r      | char   | Prints the same string "%r"  |
+
+Here's an expample of how does the parameters work in our `_printf()` function:
+``` 
+#include "main.h"
+
+int main()
+{
+    _printf("Cohort: %i", 19);
+    return (0);
+}
+```
+The output of this main function will be:
+```
+$ ./main.out
+Cohort: 19
+```
+
 </details>
 
 ## Authors
