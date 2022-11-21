@@ -32,7 +32,11 @@ int func_c(char *buff, int count, va_list value)
 
 int func_s(char *buff, int count, va_list value)
 {
-	return (_assign(buff, count, va_arg(value, char *)));
+	char *str = va_arg(value, char *);
+
+	if (!str)
+		str = "(null)";
+	return (_assign(buff, count, str));
 }
 
 /**

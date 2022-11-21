@@ -31,8 +31,6 @@ int _printf(const char *format, ...)
 			func = check_prtr(format[i + 1]);
 			if (!func)
 			{
-				/*if (i == 0 && !format[i + 1])*/
-					/*exit(1);*/
 				buff[count] = '%';
 				i++;
 				count++;
