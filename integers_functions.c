@@ -60,6 +60,7 @@ char *_itoa(int value, int base)
 	{
 		int r = n % base;
 
+		r = _abs(r);
 		if (r >= 10)
 			buffer[i++] = 65 + (r - 10);
 		else
@@ -75,7 +76,6 @@ char *_itoa(int value, int base)
 		buffer[i++] = '-';
 
 	buffer[i] = '\0';
-
 
 	return (_reverse(buffer, i));
 }
