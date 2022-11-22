@@ -11,6 +11,8 @@ int (*check_prtr(char format))(char *, int, va_list)
 	int j = 0;
 
 	ptr_ch arg_ptr[] = {
+		{"d", func_d},
+		{"i", func_i},
 		{"c", func_c},
 		{"s", func_s},
 		{"%", func_ptg},

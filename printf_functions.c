@@ -1,6 +1,38 @@
 #include "main.h"
 
 /**
+ * func_d - add a value to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_d(char *buff, int count, va_list value)
+{
+	int base = 10;
+	char *str = _itoa(va_arg(value, int), base);
+
+	return (_assign(buff, count, str));
+}
+
+/**
+ * func_i - add a integer to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_i(char *buff, int count, va_list value)
+{
+	int base = 10;
+	char *str = _itoa(va_arg(value, int), base);
+
+	return (_assign(buff, count, str));
+}
+
+/**
  * func_c - add a character to buff
  * @buff: str var
  * @count: index counter
@@ -54,17 +86,3 @@ int func_ptg(char *buff, int count, va_list value)
 	return (count + 1);
 }
 
-/**
- * func_i - add an integer to buff
- * @buff: str var
- * @count: index counter
- * @value: value in the index
- * Return: int
- */
-
-int func_i(char *buff, int count, va_list value)
-{
-	(void)value;
-	buff[0] = '%';
-	return (count + 1);
-}

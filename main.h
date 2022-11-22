@@ -1,11 +1,16 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
-/* Libraries */
+
+/* ======= LIBRARIES ======= */
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+
+/* ======= STRUCTURES ====== */
 
 /**
  * struct ptr - parameters and functions struct
@@ -18,27 +23,37 @@ typedef struct ptr
 	int (*f)(char *, int, va_list);
 } ptr_ch;
 
-/* Functions Prototypes */
+
+/* === FUNCTIONS PROTOTYPES === */
+
+/* _printf and parameter checker Functions*/
 int _printf(const char *format, ...);
 int (*check_prtr(char format))(char *, int, va_list);
 
-/*void func_d(char *buff, int count, va_list value);*/
-/*void func_i(char *buff, int count, va_list value);*/
-/*void func_u(char *buff, int count, va_list value);*/
-/*void func_o(char *buff, int count, va_list value);*/
-/*void func_x(char *buff, int count, va_list value);*/
-/*void func_X(char *buff, int count, va_list value);*/
-
+/* Parameters Functions */
+int func_d(char *buff, int count, va_list value);
+int func_i(char *buff, int count, va_list value);
+/*int func_u(char *buff, int count, va_list value);*/
+/*int func_o(char *buff, int count, va_list value);*/
+/*int func_x(char *buff, int count, va_list value);*/
+/*int func_X(char *buff, int count, va_list value);*/
 int func_c(char *buff, int count, va_list value);
 int func_s(char *buff, int count, va_list value);
-
-/*void func_p(char *buff, int count, va_list value);*/
-
+/*int func_p(char *buff, int count, va_list value);*/
 int func_ptg(char *buff, int count, va_list value);
-/*void func_r(char *buff, int count, va_list value);*/
+/*int func_r(char *buff, int count, va_list value);*/
+
+/* Assign and Count len to Buff*/
 int _assign(char *buff, int count, char *value);
+
+/* Strings Functions */
 int _strlen(char *s);
+char *_reverse(char *s, int n);
+
+/* Integers Functions */
+int _abs(int n);
 int _atoi(char *str);
+char *_itoa(int value, int base);
 
 
 #endif

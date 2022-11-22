@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	char *buff;
-	int  i = 0, count = 0, buff_len = 0;
+	int  i = 0, count = 0;
 	va_list arg_value;
 	int (*func)(char *, int, va_list);
 
@@ -41,9 +41,8 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	buff_len = _strlen(buff);
-	write(1, buff, buff_len);
+	write(1, buff, count);
 	va_end(arg_value);
 	free(buff);
-	return (buff_len);
+	return (count);
 }
