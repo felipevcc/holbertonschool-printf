@@ -53,3 +53,18 @@ int func_ptg(char *buff, int count, va_list value)
 	buff[0] = '%';
 	return (count + 1);
 }
+
+/**
+ * func_i - add an integer to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_i(char *buff, int count, va_list value)
+{
+	(void)value;
+	buff[0] = '%';
+	return (count + 1);
+}

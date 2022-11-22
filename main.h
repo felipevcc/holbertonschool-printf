@@ -38,5 +38,7 @@ int func_ptg(char *buff, int count, va_list value);
 /*void func_r(char *buff, int count, va_list value);*/
 int _assign(char *buff, int count, char *value);
 int _strlen(char *s);
+int _atoi(char *str);
+
 
 #endif
