@@ -73,7 +73,7 @@ The next chart explains the detailed functionality of the parameters that the fu
 | %%      | char   | Print a single % character  |
 | %r      | char   | Prints the same string "%r"  |
 
-Here's an expample of how does the parameters work in our `_printf()` function:
+Here's an example of how does the parameters work in our `_printf()` function:
 ``` 
 #include "main.h"
 

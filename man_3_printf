@@ -63,4 +63,36 @@ Upon successful return, these functions return the number of characters printed 
 
 .SH EXAMPLES
 
-aerg
+To call the _printf() function the next code is required:
+
+#include "main.h"
+
+int main() 
+.TP
+\r{
+.TP
+	_printf("string to print");
+.TP
+	return (0);
+.TP
+\r}
+
+.TP
+Here's an example of how does the parameters work in our _printf() function:
+.TP
+#include "main.h"
+.TP
+int main()
+.TP
+\r{
+.TP
+	_printf("Cohort: %i", 19);
+.TP
+	return (0);
+.TP
+\r}
+.TP
+The output of this main function will be:
+.TP
+Cohort: 19
+
