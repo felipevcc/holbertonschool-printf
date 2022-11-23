@@ -33,6 +33,20 @@ int func_i(char *buff, int count, va_list value)
 }
 
 /**
+ * func_u - add a unsigned ineteger to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+unsigned int func_u(char *buff, int count, va_list value)
+{
+	int base = 16;
+	
+}
+
+/**
  * func_c - add a character to buff
  * @buff: str var
  * @count: index counter
