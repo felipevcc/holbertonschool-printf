@@ -117,7 +117,7 @@ char *_uitoa(unsigned int value, unsigned int base)
 	if (value < 0 && base == 10)
 		buffer[i++] = '-';
 
-	buffer = '\0';
+	buffer[i] = '\0';
 
 	return (_reverse(buffer, i));
 }

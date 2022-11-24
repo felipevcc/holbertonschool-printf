@@ -40,10 +40,36 @@ int func_i(char *buff, int count, va_list value)
  * Return: int
  */
 
-unsigned int func_u(char *buff, int count, va_list value)
+int func_u(char *buff, int count, va_list value)
 {
-	int base = 16;
-	
+	int base = 10;
+	char *str = _itoa(va_arg(value, int), base);
+
+	return (_assign(buff, count, str));
+}
+
+/**
+ * func_x - add a unsigned hexadecimal to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_x(char *buff, int count, va_list value)
+{
+	int base = 10;
+	int integer = va_arg(value, int);
+	unsigned int u_integer = 0;
+	char *hex;
+
+	if (integer < 0)
+		u_integer = _abs(integer);
+
+	hex = _uitoa(u_integer, base);
+
+	return (_assign(buff, count, hex));
+
 }
 
 /**
