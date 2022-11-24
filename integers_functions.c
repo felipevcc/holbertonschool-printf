@@ -81,7 +81,7 @@ char *_itoa(int value, int base)
 }
 
 /**
- * *_uitoa - Modifies the data type from 'unsigend' to 'char *'
+ * *_utoa - Modifies the data type from 'unsigend' to 'char *'
  * @value: Number or value
  * @base: Base to convert
  * Return: char *
@@ -91,6 +91,90 @@ char *_utoa(unsigned int value, unsigned int base)
 {
 	char buffer[1024];
 	unsigned int i, r;
+
+	if (base < 2 || base > 32)
+		exit(1);	
+
+	i = 0;
+	while (value)
+	{
+		r = value % base;
+
+		if (r >= 10)
+			buffer[i] = 65 + (r - 10);
+		else
+			buffer[i] = 48 + r;
+
+		i++;
+		value = value / base;
+	}
+	
+	if (i == 0)
+	{
+		buffer[i] = '0';
+		i++;
+	}
+
+	buffer[i] = '\0';
+
+	return (_reverse(buffer, i));
+}
+
+/**
+ * *_lcutoa - Modifies the data type from 'unsigend' to 'char *' and changes to lower case
+ * @value: Number or value
+ * @base: Base to convert
+ * Return: char *
+ */
+
+char *_lcutoa(unsigned int value, unsigned int base)
+{
+	char buffer[1024];
+	unsigned int i, r;
+
+	if (base < 2 || base > 32)
+		exit(1);	
+
+	i = 0;
+	while (value)
+	{
+		r = value % base;
+
+		if (r >= 10)
+		{
+			buffer[i] = 65 + (r - 10);
+			if (buffer[i] >= 65 && buffer[i] <= 90)
+				buffer[i] += 32;
+		}
+		else
+			buffer[i] = 48 + r;
+
+		i++;
+		value = value / base;
+	}
+	
+	if (i == 0)
+	{
+		buffer[i] = '0';
+		i++;
+	}
+
+	buffer[i] = '\0';
+
+	return (_reverse(buffer, i));
+}
+
+/**
+ * *_lutoa - Modifies the data type from 'unsigend' to 'char *'
+ * @value: Number or value
+ * @base: Base to convert
+ * Return: char *
+ */
+
+char *_lutoa(long unsigned int value, long unsigned int base)
+{
+	char buffer[1024];
+	long unsigned int i, r;
 
 	if (base < 2 || base > 32)
 		exit(1);	

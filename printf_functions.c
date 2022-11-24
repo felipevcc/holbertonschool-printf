@@ -82,18 +82,34 @@ int func_o(char *buff, int count, va_list value)
 
 int func_x(char *buff, int count, va_list value)
 {
-	int base = 10;
-	int integer = va_arg(value, int);
-	unsigned int u_integer = 0;
-	char *hex;
+	int base = 16;
+	unsigned int integer; 
+	char *str;	
+	
+	integer = va_arg(value, unsigned int);
+	str = _lcutoa(integer, base);
 
-	if (integer < 0)
-		u_integer = _abs(integer);
+	return (_assign(buff, count, str));
+}
 
-	hex = _utoa(u_integer, base);
+/**
+ * func_X - add a unsigned hexadecimal to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
 
-	return (_assign(buff, count, hex));
+int func_X(char *buff, int count, va_list value)
+{
+	int base = 16;
+	unsigned int integer; 
+	char *str;	
+	
+	integer = va_arg(value, unsigned int);
+	str = _utoa(integer, base);
 
+	return (_assign(buff, count, str));
 }
 
 /**
@@ -136,7 +152,7 @@ int func_s(char *buff, int count, va_list value)
 }
 
 /**
- * func_p - add a address to buff
+ * func_p - add an address to buff
  * @buff: str var
  * @count: index counter
  * @value: value in the index
@@ -145,9 +161,14 @@ int func_s(char *buff, int count, va_list value)
 
 int func_p(char *buff, int count, va_list value)
 {
-	char *address = va_arg(value, void *);
+	long unsigned int base = 16;
+	char *address;
+	char *str;
 
-	return (_assign(buff, count, address));
+	address = va_arg(value, void *);
+	str = _lutoa(*address, base);
+
+	return (_assign(buff, count, str));
 }
 
 /**

@@ -36,7 +36,7 @@ int func_i(char *buff, int count, va_list value);
 int func_u(char *buff, int count, va_list value);
 int func_o(char *buff, int count, va_list value);
 int func_x(char *buff, int count, va_list value);
-/*int func_X(char *buff, int count, va_list value);*/
+int func_X(char *buff, int count, va_list value);
 int func_c(char *buff, int count, va_list value);
 int func_s(char *buff, int count, va_list value);
 int func_p(char *buff, int count, va_list value);
@@ -56,5 +56,7 @@ int _abs(int n);
 int _atoi(char *str);
 char *_itoa(int value, int base);
 char *_utoa(unsigned int value, unsigned int base);
+char *_lcutoa(unsigned int value, unsigned int base);
+char *_lutoa(long unsigned int value, long unsigned int base);
 
 #endif
