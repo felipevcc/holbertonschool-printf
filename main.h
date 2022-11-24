@@ -39,9 +39,9 @@ int func_x(char *buff, int count, va_list value);
 /*int func_X(char *buff, int count, va_list value);*/
 int func_c(char *buff, int count, va_list value);
 int func_s(char *buff, int count, va_list value);
-/*int func_p(char *buff, int count, va_list value);*/
+int func_p(char *buff, int count, va_list value);
 int func_ptg(char *buff, int count, va_list value);
-/*int func_r(char *buff, int count, va_list value);*/
+int func_r(char *buff, int count, va_list value);
 
 /* Assign and Count len to Buff*/
 int _assign(char *buff, int count, char *value);

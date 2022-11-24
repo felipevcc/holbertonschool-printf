@@ -90,32 +90,30 @@ char *_itoa(int value, int base)
 char *_uitoa(unsigned int value, unsigned int base)
 {
 	char buffer[1024];
-	unsigned int n, i;
+	unsigned int i, r;
 
 	if (base < 2 || base > 32)
-		exit(1);
-
-	n = _abs(value);
+		exit(1);	
 
 	i = 0;
-	while (n)
+	while (value)
 	{
-		unsigned int r = n % base;
+		r = value % base;
 
-		r = _abs(r);
 		if (r >= 10)
-			buffer[i++] = 65 + (r - 10);
+			buffer[i] = 65 + (r - 10);
 		else
-			buffer[i++] = 48 + r;
+			buffer[i] = 48 + r;
 
-		n = n / base;
+		i++;
+		value = value / base;
 	}
 	
 	if (i == 0)
-		buffer[i++] = '0';
-
-	if (value < 0 && base == 10)
-		buffer[i++] = '-';
+	{
+		buffer[i] = '0';
+		i++;
+	}
 
 	buffer[i] = '\0';
 

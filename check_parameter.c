@@ -17,7 +17,9 @@ int (*check_prtr(char format))(char *, int, va_list)
 		{"x", func_x},
 		{"c", func_c},
 		{"s", func_s},
+		{"p", func_p},
 		{"%", func_ptg},
+		{"r", func_r},
 		{NULL, NULL}
 	};
 

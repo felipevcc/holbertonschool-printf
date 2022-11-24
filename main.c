@@ -9,14 +9,27 @@
  */
 int main(void)
 {
-	unsigned int ui;
+	/*unsigned int ui;
 
-	ui = (unsigned int)INT_MAX + 1024;
+	ui = (unsigned int)INT_MAX + 1024;*/
+	
+	/*void *addr;
 
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
+	addr = (void *)0x7ffe637541f0;*/
+
+	/*printf("ui: %d\n", ui);*/
+	/*_printf("Unsigned:[%u]\n", ui);
+	printf("Unsigned:[%u]\n", ui);*/
+	
+	/*_printf("Address:[%p]\n", addr);
+  printf("Address:[%p]\n", addr);*/
+	/*
 	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+	*/
+
+	_printf("Unknown:[%r]\n", "hola");
+  printf("Unknown:[%r]\n");
 
 	return (0);
 }

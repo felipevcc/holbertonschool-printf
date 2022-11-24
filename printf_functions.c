@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * func_d - add a value to buff
@@ -43,7 +44,11 @@ int func_i(char *buff, int count, va_list value)
 int func_u(char *buff, int count, va_list value)
 {
 	int base = 10;
-	char *str = _itoa(va_arg(value, int), base);
+	unsigned int integer; 
+	char *str;	
+	
+	integer = va_arg(value, unsigned int);
+	str = _uitoa(integer, base);
 
 	return (_assign(buff, count, str));
 }
@@ -112,6 +117,21 @@ int func_s(char *buff, int count, va_list value)
 }
 
 /**
+ * func_p - add a address to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_p(char *buff, int count, va_list value)
+{
+	char *address = va_arg(value, void *);
+
+	return (_assign(buff, count, address));
+}
+
+/**
  * func_ptg - add a '%' to buff
  * @buff: str var
  * @count: index counter
@@ -124,5 +144,21 @@ int func_ptg(char *buff, int count, va_list value)
 	(void)value;
 	buff[0] = '%';
 	return (count + 1);
+}
+
+/**
+ * func_r - add a reversed string to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_r(char *buff, int count, va_list value)
+{
+	char *str = va_arg(value, char *);
+	char *rev_str = _reverse(str, _strlen(str));
+	
+	return (_assign(buff, count, rev_str));
 }
 
