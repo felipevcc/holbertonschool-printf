@@ -9,10 +9,9 @@
  */
 int main(void)
 {
-	/*
 	unsigned int ui;
 
-	ui = (unsigned int)INT_MAX + 1024;*/
+	ui = (unsigned int)INT_MAX + 1024;
 	
 	/*void *addr;
 
@@ -31,7 +30,9 @@ int main(void)
 
 	/*_printf("%r", "hola");*/
 
-	_printf("%b\n", 98);
+	/*_printf("%b\n", 98);*/
+
+	_printf("Unsigned octal:[%o]\n", ui);
 
 	return (0);
 }

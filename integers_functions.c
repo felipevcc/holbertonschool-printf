@@ -87,7 +87,7 @@ char *_itoa(int value, int base)
  * Return: char *
  */
 
-char *_uitoa(unsigned int value, unsigned int base)
+char *_utoa(unsigned int value, unsigned int base)
 {
 	char buffer[1024];
 	unsigned int i, r;

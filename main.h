@@ -34,7 +34,7 @@ int (*check_prtr(char format))(char *, int, va_list);
 int func_d(char *buff, int count, va_list value);
 int func_i(char *buff, int count, va_list value);
 int func_u(char *buff, int count, va_list value);
-/*int func_o(char *buff, int count, va_list value);*/
+int func_o(char *buff, int count, va_list value);
 int func_x(char *buff, int count, va_list value);
 /*int func_X(char *buff, int count, va_list value);*/
 int func_c(char *buff, int count, va_list value);
@@ -55,6 +55,6 @@ char *_reverse(char *s, int n);
 int _abs(int n);
 int _atoi(char *str);
 char *_itoa(int value, int base);
-char *_uitoa(unsigned int value, unsigned int base);
+char *_utoa(unsigned int value, unsigned int base);
 
 #endif
