@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	/*unsigned int ui;
+	/*
+	unsigned int ui;
 
 	ui = (unsigned int)INT_MAX + 1024;*/
 	
@@ -28,8 +29,9 @@ int main(void)
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	*/
 
-	_printf("Unknown:[%r]\n", "hola");
-  printf("Unknown:[%r]\n");
+	/*_printf("%r", "hola");*/
+
+	_printf("%b\n", 98);
 
 	return (0);
 }

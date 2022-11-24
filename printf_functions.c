@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * func_d - add a value to buff
@@ -147,6 +146,26 @@ int func_ptg(char *buff, int count, va_list value)
 }
 
 /**
+ * func_b - add a binary to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_b(char *buff, int count, va_list value)
+{
+	int base = 2;
+	unsigned int integer; 
+	char *str;	
+	
+	integer = va_arg(value, unsigned int);
+	str = _uitoa(integer, base);
+
+	return (_assign(buff, count, str));
+}
+
+/**
  * func_r - add a reversed string to buff
  * @buff: str var
  * @count: index counter
@@ -158,7 +177,7 @@ int func_r(char *buff, int count, va_list value)
 {
 	char *str = va_arg(value, char *);
 	char *rev_str = _reverse(str, _strlen(str));
-	
+
 	return (_assign(buff, count, rev_str));
 }
 
