@@ -68,10 +68,12 @@ The next chart explains the detailed functionality of the parameters that the fu
 | %x      | int    | Hexadecimal notation (using lowercase letters a-f)  |
 | %X      | int    | Hexadecimal notation (using uppercase letters A-F)  |
 | %c      | int    | Convert an int to an unsigned character and print the resulting character  |
-| %s      | char * | Print the string pointed to by a char *  |
+| %s      | char * | Print a string pointed to by a char *  |
 | %p      | void * | Print a void * argument in hexadecimal (ANSI C only)  |
 | %%      | char   | Print a single % character  |
-| %r      | char   | Prints the same string "%r"  |
+| %b      | int    | Print a converted number to binary (base 2)  |
+| %r      | char * | Print a reversed string  |
+| %R      | char * | Converts a string to rot13 and prints it  |
 
 Here's an example of how does the parameters work in our `_printf()` function:
 ``` 
