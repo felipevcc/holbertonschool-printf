@@ -47,12 +47,14 @@ int func_R(char *buff, int count, va_list value);
 
 /* Assign and Count len to Buff*/
 int _assign(char *buff, int count, char *value);
+int _rev_assign(char *buff, int count, char *value);
 
 /* Strings Functions */
 int _strlen(char *s);
 char *_reverse(char *s, int n);
 char *_rot13(char *str);
-char *_reverse2(char *s, int n);
+void _strcpy(char *dest, char *src);
+void _rev_ptr(char *str);
 
 /* Integers Functions */
 int _abs(int n);

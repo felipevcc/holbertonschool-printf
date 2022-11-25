@@ -60,24 +60,42 @@ char *_rot13(char *str)
 				break;
 			}
 		}
-	}
+	}	
+
 	return (str);
 }
 
-char *_reverse2(char *s, int n)
+/**
+ * *_strcpy - copies the string
+ * @dest: pointer dest
+ * @src: string
+ * Return: array result
+ */
+
+void _strcpy(char *dest, char *src)
 {
+	int len = _strlen(src);
 	int i;
-	char *s_out = '\0';
-	int len = _strlen(s);
 
-	n--;
-
-	for (i = 0; i <= n; i++)
-	{
-		s_out[i] = s[len - i];
-	}
-
-	return (s_out);
+	for (i = 0; i <= len; i++)
+		dest[i] = src[i];
 }
 
+/**
+ * _rev_ptr - Reverses the content of an pointer
+ * @str: str var
+ */
+
+void _rev_ptr(char *str)
+{
+	int i, aux;
+	int len = _strlen(str) - 1;
+
+	for (i = 0; i <= len; i++, len--)
+	{
+		aux = str[i];
+		str[i] = str[len];
+		str[len] = aux;
+	}
+}
 

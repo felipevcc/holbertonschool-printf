@@ -215,11 +215,17 @@ int func_b(char *buff, int count, va_list value)
  */
 
 int func_r(char *buff, int count, va_list value)
-{
+{		
 	char *str = va_arg(value, char *);
-	char *rev_str = _reverse2(str, _strlen(str));
+	char *rev_str = malloc(_strlen(str) + 1);
 
-	return (_assign(buff, count, rev_str));
+	_strcpy(rev_str, str);
+	_rev_ptr(rev_str);
+
+	count = _assign(buff, count, rev_str);
+	free(rev_str);
+
+	return (count);
 }
 
 /**
@@ -233,8 +239,14 @@ int func_r(char *buff, int count, va_list value)
 int func_R(char *buff, int count, va_list value)
 {
 	char *str = va_arg(value, char *);
-	char *encoded_str = _rot13(str);
+	char *encoded_str = malloc(_strlen(str) + 1);
 
-	return (_assign(buff, count, encoded_str));
+	_strcpy(encoded_str, str);
+	_rot13(encoded_str);
+
+	count = _assign(buff, count, encoded_str);
+	free(encoded_str);
+
+	return (count);
 }
 
