@@ -152,26 +152,6 @@ int func_s(char *buff, int count, va_list value)
 }
 
 /**
- * func_p - add an address to buff
- * @buff: str var
- * @count: index counter
- * @value: value in the index
- * Return: int
- */
-
-int func_p(char *buff, int count, va_list value)
-{
-	unsigned long int base = 16;
-	char *address;
-	char *str;
-
-	address = va_arg(value, void *);
-	str = _lutoa(*address, base);
-
-	return (_assign(buff, count, str));
-}
-
-/**
  * func_ptg - add a '%' to buff
  * @buff: str var
  * @count: index counter

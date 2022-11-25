@@ -17,28 +17,6 @@ int _abs(int n)
 }
 
 /**
-* _atoi - Modifies the data type from 'char *' to 'int'
-* @str: Str var
-* Return: int
-*/
-
-int _atoi(char *str)
-{
-	int i = 0;
-	int result = 0;
-
-	if (*str == '-')
-		i = 1;
-
-	for (; str[i] != '\0'; i++)
-		result = result * 10 + str[i] - '0';
-
-	if (*str == '-')
-		return (-result);
-	return (result);
-}
-
-/**
  * *_itoa - Modifies the data type from 'int' to 'char *'
  * @value: Number or value
  * @base: Base to convert
@@ -146,46 +124,6 @@ char *_lcutoa(unsigned int value, unsigned int base)
 			if (buffer[i] >= 65 && buffer[i] <= 90)
 				buffer[i] += 32;
 		}
-		else
-			buffer[i] = 48 + r;
-
-		i++;
-		value = value / base;
-	}
-
-	if (i == 0)
-	{
-		buffer[i] = '0';
-		i++;
-	}
-
-	buffer[i] = '\0';
-
-	return (_reverse(buffer, i));
-}
-
-/**
- * *_lutoa - Modifies the data type from 'unsigned' to 'char *'
- * @value: Number or value
- * @base: Base to convert
- * Return: char *
- */
-
-char *_lutoa(unsigned long int value, unsigned long int base)
-{
-	char buffer[1024];
-	unsigned long int i, r;
-
-	if (base < 2 || base > 32)
-		exit(1);
-
-	i = 0;
-	while (value)
-	{
-		r = value % base;
-
-		if (r >= 10)
-			buffer[i] = 65 + (r - 10);
 		else
 			buffer[i] = 48 + r;
 

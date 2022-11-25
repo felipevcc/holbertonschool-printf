@@ -39,7 +39,6 @@ int func_x(char *buff, int count, va_list value);
 int func_X(char *buff, int count, va_list value);
 int func_c(char *buff, int count, va_list value);
 int func_s(char *buff, int count, va_list value);
-int func_p(char *buff, int count, va_list value);
 int func_ptg(char *buff, int count, va_list value);
 int func_b(char *buff, int count, va_list value);
 int func_r(char *buff, int count, va_list value);
@@ -58,10 +57,8 @@ void _rev_ptr(char *str);
 
 /* Integers Functions */
 int _abs(int n);
-int _atoi(char *str);
 char *_itoa(int value, int base);
 char *_utoa(unsigned int value, unsigned int base);
 char *_lcutoa(unsigned int value, unsigned int base);
-char *_lutoa(unsigned long int value, unsigned long int base);
 
 #endif
