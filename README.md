@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Printf Project</h1>
-    <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=6E93CC&labelColor=1a1e29&style=for-the-badge">
+    <img src="https://img.shields.io/github/repo-size/felipevcc/holbertonschool-printf?color=E97A6B&labelColor=1a1e29&style=for-the-badge">
 </div>
 
 ## Description
@@ -16,7 +16,7 @@ $ man ./man_3_printf
 
 ## Flowchart
 
-img...
+<img src="https://i.imgur.com/1J0VoyT.jpg" alt="flowchart">
 
 ## Usage
 
