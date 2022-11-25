@@ -62,6 +62,6 @@ int _atoi(char *str);
 char *_itoa(int value, int base);
 char *_utoa(unsigned int value, unsigned int base);
 char *_lcutoa(unsigned int value, unsigned int base);
-char *_lutoa(long unsigned int value, long unsigned int base);
+char *_lutoa(unsigned long int value, unsigned long int base);
 
 #endif

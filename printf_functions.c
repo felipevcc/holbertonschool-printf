@@ -43,9 +43,9 @@ int func_i(char *buff, int count, va_list value)
 int func_u(char *buff, int count, va_list value)
 {
 	int base = 10;
-	unsigned int integer; 
-	char *str;	
-	
+	unsigned int integer;
+	char *str;
+
 	integer = va_arg(value, unsigned int);
 	str = _utoa(integer, base);
 
@@ -63,9 +63,9 @@ int func_u(char *buff, int count, va_list value)
 int func_o(char *buff, int count, va_list value)
 {
 	int base = 8;
-	unsigned int integer; 
-	char *str;	
-	
+	unsigned int integer;
+	char *str;
+
 	integer = va_arg(value, unsigned int);
 	str = _utoa(integer, base);
 
@@ -83,9 +83,9 @@ int func_o(char *buff, int count, va_list value)
 int func_x(char *buff, int count, va_list value)
 {
 	int base = 16;
-	unsigned int integer; 
-	char *str;	
-	
+	unsigned int integer;
+	char *str;
+
 	integer = va_arg(value, unsigned int);
 	str = _lcutoa(integer, base);
 
@@ -103,9 +103,9 @@ int func_x(char *buff, int count, va_list value)
 int func_X(char *buff, int count, va_list value)
 {
 	int base = 16;
-	unsigned int integer; 
-	char *str;	
-	
+	unsigned int integer;
+	char *str;
+
 	integer = va_arg(value, unsigned int);
 	str = _utoa(integer, base);
 
@@ -161,7 +161,7 @@ int func_s(char *buff, int count, va_list value)
 
 int func_p(char *buff, int count, va_list value)
 {
-	long unsigned int base = 16;
+	unsigned long int base = 16;
 	char *address;
 	char *str;
 
@@ -197,9 +197,9 @@ int func_ptg(char *buff, int count, va_list value)
 int func_b(char *buff, int count, va_list value)
 {
 	int base = 2;
-	unsigned int integer; 
-	char *str;	
-	
+	unsigned int integer;
+	char *str;
+
 	integer = va_arg(value, unsigned int);
 	str = _utoa(integer, base);
 
@@ -215,7 +215,7 @@ int func_b(char *buff, int count, va_list value)
  */
 
 int func_r(char *buff, int count, va_list value)
-{		
+{
 	char *str = va_arg(value, char *);
 	char *rev_str = malloc(_strlen(str) + 1);
 

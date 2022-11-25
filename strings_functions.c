@@ -9,7 +9,7 @@
 int _strlen(char *s)
 {
 	int count = 0;
-	
+
 	while (s[count] != '\0')
 		count++;
 	return (count);
@@ -39,7 +39,7 @@ char *_reverse(char *s, int n)
 }
 
 /**
- * *rot13 - encodes a string with rot13
+ * *_rot13 - encodes a string with rot13
  * @str: string
  * Return: encoded string
  */
@@ -60,7 +60,7 @@ char *_rot13(char *str)
 				break;
 			}
 		}
-	}	
+	}
 
 	return (str);
 }

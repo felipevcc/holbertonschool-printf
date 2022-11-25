@@ -93,7 +93,7 @@ char *_utoa(unsigned int value, unsigned int base)
 	unsigned int i, r;
 
 	if (base < 2 || base > 32)
-		exit(1);	
+		exit(1);
 
 	i = 0;
 	while (value)
@@ -108,7 +108,7 @@ char *_utoa(unsigned int value, unsigned int base)
 		i++;
 		value = value / base;
 	}
-	
+
 	if (i == 0)
 	{
 		buffer[i] = '0';
@@ -121,7 +121,7 @@ char *_utoa(unsigned int value, unsigned int base)
 }
 
 /**
- * *_lcutoa - Modifies the data type from 'unsigned' to 'char *' and changes to lower case
+ * *_lcutoa - Modifies type from 'unsigned' to 'char *' with lower case
  * @value: Number or value
  * @base: Base to convert
  * Return: char *
@@ -133,7 +133,7 @@ char *_lcutoa(unsigned int value, unsigned int base)
 	unsigned int i, r;
 
 	if (base < 2 || base > 32)
-		exit(1);	
+		exit(1);
 
 	i = 0;
 	while (value)
@@ -152,7 +152,7 @@ char *_lcutoa(unsigned int value, unsigned int base)
 		i++;
 		value = value / base;
 	}
-	
+
 	if (i == 0)
 	{
 		buffer[i] = '0';
@@ -171,13 +171,13 @@ char *_lcutoa(unsigned int value, unsigned int base)
  * Return: char *
  */
 
-char *_lutoa(long unsigned int value, long unsigned int base)
+char *_lutoa(unsigned long int value, unsigned long int base)
 {
 	char buffer[1024];
-	long unsigned int i, r;
+	unsigned long int i, r;
 
 	if (base < 2 || base > 32)
-		exit(1);	
+		exit(1);
 
 	i = 0;
 	while (value)
@@ -192,7 +192,7 @@ char *_lutoa(long unsigned int value, long unsigned int base)
 		i++;
 		value = value / base;
 	}
-	
+
 	if (i == 0)
 	{
 		buffer[i] = '0';
