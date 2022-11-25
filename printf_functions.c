@@ -166,7 +166,7 @@ int func_p(char *buff, int count, va_list value)
 	char *str;
 
 	address = va_arg(value, void *);
-	str = _lutoa(address, base);
+	str = _lutoa(*address, base);
 
 	return (_assign(buff, count, str));
 }
@@ -220,5 +220,21 @@ int func_r(char *buff, int count, va_list value)
 	char *rev_str = _reverse(str, _strlen(str));
 
 	return (_assign(buff, count, rev_str));
+}
+
+/**
+ * func_R - add a reversed string to buff
+ * @buff: str var
+ * @count: index counter
+ * @value: value in the index
+ * Return: int
+ */
+
+int func_R(char *buff, int count, va_list value)
+{
+	char *str = va_arg(value, char *);
+	/*char *encoded_str = _rot13(str);*/
+
+	return (_assign(buff, count, _rot13(str)));
 }
 

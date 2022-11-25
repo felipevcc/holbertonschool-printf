@@ -38,3 +38,30 @@ char *_reverse(char *s, int n)
 	return (s);
 }
 
+/**
+ * *rot13 - encodes a string with rot13
+ * @str: string
+ * Return: encoded string
+ */
+
+char *_rot13(char *str)
+{
+	int i, j;
+	char chs[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; str[i]; i++)
+	{
+		for (j = 0; chs[j]; j++)
+		{
+			if (str[i] == chs[j])
+			{
+				str[i] = rot[j];
+				break;
+			}
+		}
+	}
+	return (str);
+}
+
+
