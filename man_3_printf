@@ -4,21 +4,12 @@
 printf - format and print data
 
 .SH SYNOPSIS
-.B printf
-.I FORMAT [ARGUMENT]...
-.TP
-.B \rprintf 
-.I \rOPTION
+int _printf(const char *format, ...);
 
 .SH DESCRIPTION
 
-Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
-
-.B --help 
-display this help and exit
-
-.B --version
-output version information and exit
+This project is a simulation of the printf function in C with its most important features, it was made in the software development program of Holberton School.
+Its functionality is to print ARGUMENT(s) according to FORMAT.
 
 .SH OPTIONS
 
@@ -26,40 +17,51 @@ A character that specifies the type of conversion to be applied.  The conversion
 
 .B d, i 
 .RS
-The  int  argument  is  converted to signed decimal notation.  The precision, if any, gives the minimum number of digits that must appear; if the converted value requires fewer digits, it is padded on the left with zeros.  The default precision is  1. When 0 is printed with an explicit precision 0, the output is empty.
+The  int  argument  is  converted to signed decimal notation and prints this.
 
 .RE 
 .B o, u, x, X
 .RS
-The  unsigned  int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x and X) notation.  The letters abcdef are used for x conversions; the letters ABCDEF are used for X conversions.  The precision, if  any, gives  the  minimum number of digits that must appear; if the converted value requires fewer digits, it is padded on the left with zeros.  The default precision is 1.  When 0 is printed with an explicit precision 0, the output is empty.
+The  unsigned  int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x and X) notation, "x" is to lowercase and "X" is to uppercase.
+
+.RE 
+.B b
+.RS
+Prints a converted number to binary (base 2).
 
 .RE
 .B c
 .RS
-If no l modifier is present, the int argument is converted to an unsigned char, and the resulting character is  written.   If an  l  modifier  is  present, the wint_t (wide character) argument is converted to a multibyte sequence by a call to the wcr‐tomb(3) function, with a conversion state starting in the initial state, and the resulting multibyte string is written.
+The int argument is converted to an unsigned char, and the resulting character is  written. 
 
 .RE
 .B s
 .RS
-If no l modifier is present: the const char * argument is expected to be a pointer to an array of character type (pointer  to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0'); if a precision is specified, no more than the number specified are written.  If a precision is given, no null byte need be present; if the precision is not specified, or is greater than the size of the array, the array must contain a terminating null byte.
-
-If  an  l modifier is present: the const wchar_t * argument is expected to be a pointer to an array of wide characters.  Wide characters from the array are converted to multibyte characters (each by a call to the wcrtomb(3) function, with a conversion state  starting in the initial state before the first wide character), up to and including a terminating null wide character. The resulting multibyte characters are written up to (but not including) the terminating null byte.  If a precision is specified,  no  more  bytes than the number specified are written, but no partial multibyte characters are written.  Note that the precision determines the number of bytes written, not the number of wide characters or screen positions.  The array must contain  a  terminating null wide character, unless a precision is given and it is so small that the number of bytes written exceeds it before the end of the array is reached.
+Prints a string assign it in parameter's position. If string does not exist prints "(null)" in the same position.
 
 .RE
 .B p
-	The void * pointer argument is printed in hexadecimal (as if by %#x or %#lx).
+.RS
+The void * pointer argument is printed in hexadecimal (0x + %lx), prints an address.
 
 .RE
 .B r 
-	asfdgasdgadfvadfv
+.RS
+Prints a reversed string.
 
 .RE
-.B % 
-	A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
+.B R
+.RS
+Converts a string to rot13 and prints this.
+
+.RE
+.B %
+.RS
+A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
 
 .SH RETURN VALUE
 
-Upon successful return, these functions return the number of characters printed (excluding the null  byte  used  to  end  output  to strings). If an output error is encountered, a negative value is returned.
+Upon successful return, these functions return the number of characters printed (excluding the null  byte  used  to  end  output  to strings). 
 
 .SH EXAMPLES
 
@@ -95,4 +97,12 @@ int main()
 The output of this main function will be:
 .TP
 Cohort: 19
+
+.SH AUTHORS
+
+Juan Esteban Duque @Juanesduque1
+.TP
+\rAndres Rodriguez @Andres98100
+.TP
+\r\rFelipe Villamizar @felipevcc
 

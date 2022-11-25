@@ -52,6 +52,7 @@ int _assign(char *buff, int count, char *value);
 int _strlen(char *s);
 char *_reverse(char *s, int n);
 char *_rot13(char *str);
+char *_reverse2(char *s, int n);
 
 /* Integers Functions */
 int _abs(int n);

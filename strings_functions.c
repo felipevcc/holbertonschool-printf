@@ -64,4 +64,20 @@ char *_rot13(char *str)
 	return (str);
 }
 
+char *_reverse2(char *s, int n)
+{
+	int i;
+	char *s_out = '\0';
+	int len = _strlen(s);
+
+	n--;
+
+	for (i = 0; i <= n; i++)
+	{
+		s_out[i] = s[len - i];
+	}
+
+	return (s_out);
+}
+
 

@@ -217,7 +217,7 @@ int func_b(char *buff, int count, va_list value)
 int func_r(char *buff, int count, va_list value)
 {
 	char *str = va_arg(value, char *);
-	char *rev_str = _reverse(str, _strlen(str));
+	char *rev_str = _reverse2(str, _strlen(str));
 
 	return (_assign(buff, count, rev_str));
 }
