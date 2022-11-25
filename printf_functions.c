@@ -233,8 +233,8 @@ int func_r(char *buff, int count, va_list value)
 int func_R(char *buff, int count, va_list value)
 {
 	char *str = va_arg(value, char *);
-	/*char *encoded_str = _rot13(str);*/
+	char *encoded_str = _rot13(str);
 
-	return (_assign(buff, count, _rot13(str)));
+	return (_assign(buff, count, encoded_str));
 }
 

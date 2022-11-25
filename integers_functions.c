@@ -81,7 +81,7 @@ char *_itoa(int value, int base)
 }
 
 /**
- * *_utoa - Modifies the data type from 'unsigend' to 'char *'
+ * *_utoa - Modifies the data type from 'unsigned' to 'char *'
  * @value: Number or value
  * @base: Base to convert
  * Return: char *
@@ -121,7 +121,7 @@ char *_utoa(unsigned int value, unsigned int base)
 }
 
 /**
- * *_lcutoa - Modifies the data type from 'unsigend' to 'char *' and changes to lower case
+ * *_lcutoa - Modifies the data type from 'unsigned' to 'char *' and changes to lower case
  * @value: Number or value
  * @base: Base to convert
  * Return: char *
@@ -165,7 +165,7 @@ char *_lcutoa(unsigned int value, unsigned int base)
 }
 
 /**
- * *_lutoa - Modifies the data type from 'unsigend' to 'char *'
+ * *_lutoa - Modifies the data type from 'unsigned' to 'char *'
  * @value: Number or value
  * @base: Base to convert
  * Return: char *
