@@ -166,7 +166,7 @@ int func_p(char *buff, int count, va_list value)
 	char *str;
 
 	address = va_arg(value, void *);
-	str = _lutoa(*address, base);
+	str = _lutoa(address, base);
 
 	return (_assign(buff, count, str));
 }

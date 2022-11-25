@@ -2,19 +2,18 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
 int main(void)
 {
-	unsigned int ui;
+	/*unsigned int ui;*/
 	/*void *addr;*/
 
-	ui = (unsigned int)INT_MAX + 1024;
+	/*ui = (unsigned int)INT_MAX + 1024;*/
 	/*addr = (void *)0x7ffe637541f0;*/
+	void *addr;
 
+	addr = (void *)0x7ffe637541f0;
+	 _printf("Address:[%p]\n", addr);
+		printf("Address:[%p]\n", addr);
 	/*printf("ui: %d\n", ui);*/
 	/*_printf("Unsigned:[%u]\n", ui);
 	printf("Unsigned:[%u]\n", ui);*/
@@ -22,8 +21,8 @@ int main(void)
 	/*_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);*/
 	
-	_printf("Unsigned hexadecimal:[%x]\n", ui);
-    printf("Unsigned hexadecimal:[%x]\n", ui);
+	/*_printf("Unsigned hexadecimal:[%x]\n", ui);
+    printf("Unsigned hexadecimal:[%x]\n", ui);*/
 	
 
 	/*_printf("%r", "hola");
