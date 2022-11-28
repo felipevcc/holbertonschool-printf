@@ -40,18 +40,24 @@ char *_itoa(int value, int base)
 
 		r = _abs(r);
 		if (r >= 10)
-			buffer[i++] = 65 + (r - 10);
+			buffer[i] = 65 + (r - 10);
 		else
-			buffer[i++] = 48 + r;
-
+			buffer[i] = 48 + r;
+		i++;
 		n = n / base;
 	}
 
 	if (i == 0)
-		buffer[i++] = '0';
+	{
+		buffer[i] = '0';
+		i++;
+	}
 
 	if (value < 0 && base == 10)
-		buffer[i++] = '-';
+	{
+		buffer[i] = '-';
+		i++;
+	}
 
 	buffer[i] = '\0';
 

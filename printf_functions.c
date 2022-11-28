@@ -209,7 +209,7 @@ int func_r(char *buff, int count, va_list value)
 }
 
 /**
- * func_R - add a reversed string to buff
+ * func_R -  add a converted string in rot13 to buff
  * @buff: str var
  * @count: index counter
  * @value: value in the index

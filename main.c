@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	_printf("Address:[%s]\n", "addr");
+	_printf("Address:[%d]\n", 1025);
 
 	return (0);
 }

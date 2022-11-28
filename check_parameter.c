@@ -2,11 +2,11 @@
 
 /**
  * *check_prtr - parameter checker
- * @format: str var
+ * @specifier: str var
  * Return: int
  */
 
-int (*check_prtr(char format))(char *, int, va_list)
+int (*check_prtr(char specifier))(char *, int, va_list)
 {
 	int j = 0;
 
@@ -28,7 +28,7 @@ int (*check_prtr(char format))(char *, int, va_list)
 
 	while (arg_ptr[j].c)
 	{
-		if (format == *arg_ptr[j].c)
+		if (specifier == *arg_ptr[j].c)
 			break;
 		j++;
 	}

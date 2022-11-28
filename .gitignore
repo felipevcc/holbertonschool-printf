@@ -1,4 +1,5 @@
 # Ignore
 
+main.c
 *.out
 tests/

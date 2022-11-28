@@ -15,7 +15,10 @@ int _printf(const char *format, ...)
 
 	buff = malloc(4000);
 	if ((!format || !buff) || (format[0] == '%' && format[1] == '\0'))
+	{
+		free(buff);
 		exit(1);
+	}
 
 	va_start(arg_value, format);
 

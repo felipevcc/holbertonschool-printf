@@ -5,7 +5,6 @@
 /* ======= LIBRARIES ======= */
 
 #include <stdarg.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -15,7 +14,7 @@
 /**
  * struct ptr - parameters and functions struct
  * @c: parameter indicator
- * f: parameter function
+ * @f: parameter function
  */
 typedef struct ptr
 {
@@ -28,7 +27,7 @@ typedef struct ptr
 
 /* _printf and parameter checker Functions*/
 int _printf(const char *format, ...);
-int (*check_prtr(char format))(char *, int, va_list);
+int (*check_prtr(char specifier))(char *, int, va_list);
 
 /* Parameters Functions */
 int func_d(char *buff, int count, va_list value);
